@@ -1,0 +1,482 @@
+:root {
+  /* Background colors */
+  --color_bg: #000;
+  --color_surface: #a44a5e;
+
+  /* Text colors */
+  --color_text: #fff;
+  --color_text_muted: #aeaeae;
+  --color-text-dark: #656565;
+
+  /* Typography */
+
+  --font_main: "Puritan", sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 7rem;
+  --space-4xl: 11rem;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.5rem;
+
+  --text-xl: 2rem;
+  --text-2xl: 3rem;
+  --text-3xl: 4rem;
+  --text-4xl: 5rem;
+  --text-5xl: 6rem;
+  --text-6xl: 7rem;
+  --text-hero: 10rem;
+
+  /* Font weights */
+
+  --weight-thin: 100;
+  --weight-light: 300;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --weight-extrabold: 800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color_bg);
+  scrollbar-width: none;
+}
+
+#main {
+  background-color: var(--color_bg);
+  color: var(--color_text);
+  font-family: var(--font_main);
+  isolation: isolate;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color_bg);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+/* Nav bar */
+#hero #nav {
+  width: 100%;
+  height: 7rem;
+  background-color: var(--color_bg);
+  height: var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xl);
+  isolation: isolate;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+#hero #nav h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-light);
+  color: var(--color_surface);
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-container {
+  width: 50%;
+  height: var(--space-xl);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--color_bg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  transform: translateY(-3rem);
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay a {
+  text-transform: uppercase;
+  font-size: var(--text-md);
+  text-decoration: none;
+  color: var(--color_text);
+  border: 1px solid var(--color_bg);
+  transition: border 0.3s ease-in-out;
+}
+
+.overlay a:hover {
+  border-bottom: 1px solid var(--color_text);
+}
+
+#hero #nav #menu {
+  color: var(--color_text);
+  border: none;
+  background-color: var(--color_bg);
+  font-size: var(--text-base);
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0;
+  border: 1px solid var(--color_bg);
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+#hero #nav #menu:hover {
+  border-bottom: 1px solid var(--color_text);
+}
+
+#hero #nav #menu i {
+  font-size: var(--text-sm);
+}
+
+#heading {
+  border: 1px solid transparent;
+  height: 70vh;
+  background-color: var(--color_bg);
+  height: auto;
+  margin: var(--space-xl);
+  user-select: none;
+  margin-top: 7rem;
+}
+
+#heading h1 {
+  font-size: var(--text-hero);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  line-height: 0.1;
+  opacity: 0.6;
+}
+
+#heading #secondh {
+  margin-left: 8rem;
+}
+
+#block {
+  width: fit-content;
+}
+
+#block h5 {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: var(--text-md);
+  font-weight: var(--weight-regular);
+  margin-top: -50px;
+}
+
+#bottom {
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: var(--space-xl);
+}
+
+#bottom-top {
+  color: var(--color_surface);
+}
+
+#bottom h4 {
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+#hero-footer {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-xl);
+}
+
+#right {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  gap: 5px;
+}
+
+.arrow-circle {
+  font-size: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: var(--color_text);
+  opacity: 0.6;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow-circle:hover {
+  background-color: var(--color_text_muted);
+  border-radius: 50%;
+  transform: rotate(20deg);
+}
+
+/* Get some experience to add in place of the footer placeholder */
+
+#work {
+  width: 100%;
+  height: fit-content;
+  padding: 0 var(--space-4xl) 0px var(--space-xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.elem-container {
+  transition: all 0.3s ease-in-out;
+}
+
+.elem {
+  border-bottom: 1.5px solid var(--color_text_muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.first-elem {
+  border-top: 1.5px solid var(--color_text_muted);
+}
+
+.elem h1 {
+  font-size: var(--text-6xl);
+  text-transform: uppercase;
+  color: var(--color_text_muted);
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.elem p {
+  font-size: var(--text-lg);
+  color: var(--color_text_muted);
+}
+
+.elem:hover h1 {
+  transform: translateX(7rem);
+  color: var(--color-text-dark);
+}
+.elem:hover p {
+  color: var(--color-text-dark);
+}
+
+/* TODO: add a button 'view all works' which takes the user to another webpage. which has all of the projects */
+
+.marquee {
+  border-top: 1.5px solid var(--color_text_muted);
+  border-bottom: 1.5px solid var(--color_text_muted);
+  background-color: var(--color_bg);
+  padding: 3rem 0;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+.track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+.track h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-thin);
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.track .marquee-circle {
+  height: 15px;
+  width: 15px;
+  background-color: var(--color_surface);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#about {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5rem;
+  padding-right: var(--space-4xl);
+}
+
+.profile {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  background-image: url("./assets/profile.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#about .aboutme h3 {
+  color: var(--color_text_muted);
+  text-transform: uppercase;
+}
+
+#about .aboutme p {
+  font-size: var(--text-md);
+}
+
+.aboutme-button {
+  margin-top: 15px;
+  position: relative;
+}
+#aboutme-button-overlay {
+  margin-top: -10px;
+  height: 4rem;
+  width: 5.6rem;
+  position: absolute;
+  z-index: 99999999999;
+}
+
+.aboutme-button a {
+  text-decoration: none;
+  font-size: var(--text-md);
+  padding: 0.3rem 0.5rem;
+  color: var(--color_text);
+  border: 1px solid var(--color_text);
+  border-radius: 100px;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutme-button a:hover {
+  color: var(--color_bg);
+  background-color: var(--color_text);
+}
+
+#footer {
+  height: 10vh;
+  max-width: 100%;
+  padding: 0 var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer .footer-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+#footer .footer-left h4 {
+  font-size: var(--text-md);
+  text-transform: uppercase;
+}
+
+#footer .footer-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.year {
+  color: var(--color_surface);
+}
+
+#footer .footer-right a {
+  text-decoration: none;
+  color: var(--color_text);
+  font-size: var(--text-md);
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+
+#footer .footer-right a:hover {
+  border-bottom: 1px solid var(--color_text);
+}
+
+.pointer {
+  font-family: var(--font_main);
+  font-size: var(--text-xl);
+  height: 13px;
+  width: 13px;
+  background-color: #fff;
+  border-radius: 50%;
+  will-change: transform;
+  pointer-events: none;
+  position: fixed;
+  mix-blend-mode: difference;
+  transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out;
+    z-index: 9999;
+  will-change: width, height;
+  user-select: none;
+}
