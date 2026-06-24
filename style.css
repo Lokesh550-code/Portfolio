@@ -527,7 +527,7 @@ body {
 
   #heading h1 {
     font-size: clamp(3rem, 18vw, 6rem);
-    line-height: 0.9;
+    line-height: 0.1;
   }
 
   #heading #secondh {
@@ -535,7 +535,7 @@ body {
   }
 
   #block h5 {
-    margin-top: 0.5rem;
+    margin-top: 0rem;
     text-align: left;
     font-size: var(--text-sm);
   }
@@ -620,7 +620,7 @@ body {
   #about .aboutme p {
     font-size: var(--text-lg);
 
-    line-height: 1.8;
+    line-height: 1;
 
     max-width: 100%;
 
