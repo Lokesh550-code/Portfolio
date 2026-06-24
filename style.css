@@ -175,7 +175,7 @@ body {
 }
 
 #heading h1 {
-  font-size: var(--text-hero);
+  font-size: clamp(3rem, 12vw, 10rem);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   line-height: 0.1;
@@ -183,7 +183,7 @@ body {
 }
 
 #heading #secondh {
-  margin-left: 8rem;
+  margin-left: 8vw;
 }
 
 #block {
@@ -195,7 +195,6 @@ body {
   text-transform: uppercase;
   font-size: var(--text-md);
   font-weight: var(--weight-regular);
-  margin-top: -50px;
 }
 
 #bottom {
@@ -476,7 +475,387 @@ body {
     height 0.3s ease-in-out,
     background-color 0.3s ease-in-out,
     border-radius 0.3s ease-in-out;
-    z-index: 9999;
+  z-index: 9999;
   will-change: width, height;
   user-select: none;
+}
+
+@media (max-width: 850px) {
+  /* Disable cursor */
+  .pointer {
+    display: none;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  /* NAV */
+
+  #hero #nav {
+    padding: 1.5rem;
+  }
+
+  #hero #nav h3 {
+    font-size: var(--text-lg);
+  }
+
+  .menu-container {
+    width: auto;
+  }
+
+  .overlay {
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .overlay a {
+    font-size: var(--text-base);
+  }
+
+  /* HERO */
+
+  #hero {
+    height: auto;
+    max-width: 100vh;
+  }
+
+  #heading {
+    margin: 2rem;
+    margin-top: 8rem;
+  }
+
+  #heading h1 {
+    font-size: clamp(3rem, 18vw, 6rem);
+    line-height: 0.9;
+  }
+
+  #heading #secondh {
+    margin-left: 0;
+  }
+
+  #block h5 {
+    margin-top: 0.5rem;
+    text-align: left;
+    font-size: var(--text-sm);
+  }
+
+  #bottom {
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 0.5rem;
+    height: auto;
+  }
+
+  #bottom h4 {
+    font-size: var(--text-sm);
+  }
+
+  #hero-footer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    height: auto;
+  }
+
+  #right {
+    display: none;
+  }
+
+  /* WORK */
+
+  #work {
+    padding: 0;
+  }
+
+  .elem {
+    padding: 1rem 1.5rem;
+  }
+
+  .elem h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+  }
+
+  .elem p {
+    font-size: var(--text-sm);
+  }
+
+  .elem:hover h1 {
+    transform: translateX(1rem);
+  }
+
+  /* MARQUEE */
+
+  .track h1 {
+    font-size: var(--text-xl);
+  }
+
+  /* ABOUT */
+
+  #about {
+    height: auto;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 4rem 2rem;
+
+    gap: 3rem;
+  }
+
+  .profile {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .aboutme {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #about .aboutme p {
+    font-size: var(--text-lg);
+
+    line-height: 1.8;
+
+    max-width: 100%;
+
+    word-break: break-word;
+  }
+
+  .aboutme-button a {
+    font-size: var(--text-base);
+  }
+
+  /* FOOTER */
+
+  #footer {
+    flex-direction: column;
+
+    height: auto;
+
+    gap: 1.5rem;
+
+    padding: 2rem;
+  }
+
+  #footer .footer-left,
+  #footer .footer-right {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+  }
+
+  #footer h4,
+  #footer a {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  /* NAV */
+
+  #hero #nav {
+    padding: 1rem;
+  }
+
+  #hero #nav h3 {
+    font-size: var(--text-base);
+  }
+
+  #hero #nav #menu {
+    font-size: var(--text-sm);
+  }
+
+  .overlay {
+    gap: 0.5rem;
+  }
+
+  .overlay a {
+    font-size: var(--text-sm);
+  }
+
+  /* HERO */
+
+  #heading {
+    margin: 1rem;
+    margin-top: 6rem;
+  }
+
+  #heading h1 {
+    font-size: clamp(3rem, 20vw, 5rem);
+    line-height: 0.1;
+  }
+
+  #heading #secondh {
+    margin-left: 0;
+  }
+
+  #block h5 {
+    margin-top: 0.5rem;
+
+    text-align: left;
+
+    font-size: 0.8rem;
+
+    line-height: 0.001;
+  }
+
+  #bottom {
+    padding: 1rem;
+
+    align-items: flex-end;
+
+    gap: 0.4rem;
+  }
+
+  #bottom h4 {
+    font-size: 1rem;
+  }
+
+  #hero-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 1rem;
+
+    gap: 0.5rem;
+
+    height: auto;
+  }
+
+  #left,
+  #middle {
+    width: 100%;
+  }
+
+  #right {
+    display: none;
+  }
+
+  /* WORK */
+
+  #work {
+    padding: 0;
+  }
+
+  .elem {
+    padding: 1rem;
+
+    flex-direction: row;
+  }
+
+  .elem h1 {
+    font-size: clamp(2rem, 13vw, 3rem);
+
+    margin: 0.5rem 0;
+  }
+
+  .elem p {
+    font-size: 0.8rem;
+  }
+
+  .elem:hover h1 {
+    transform: translateX(0.5rem);
+  }
+
+  /* MARQUEE */
+
+  .marquee {
+    padding: 2rem 0;
+  }
+
+  .track h1 {
+    font-size: 1.5rem;
+  }
+
+  .track .marquee-circle {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* ABOUT */
+
+  #about {
+    height: auto;
+
+    padding: 3rem 1rem;
+
+    gap: 2rem;
+
+    align-items: center;
+
+    text-align: left;
+  }
+
+  .profile {
+    width: 8rem;
+
+    height: 8rem;
+  }
+
+  .aboutme {
+    width: 100%;
+  }
+
+  #about .aboutme h3 {
+    font-size: 0.8rem;
+  }
+
+  #about .aboutme p {
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+
+  .aboutme-button a {
+    display: inline-block;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 0.8rem;
+  }
+
+  /* FOOTER */
+
+  #footer {
+    flex-direction: column;
+
+    padding: 2rem 1rem;
+
+    gap: 1rem;
+
+    height: auto;
+  }
+
+  #footer .footer-left,
+  #footer .footer-right {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.8rem;
+  }
+
+  #footer h4,
+  #footer a {
+    font-size: 0.8rem;
+  }
 }
