@@ -23,6 +23,7 @@
   --space-4xl: 11rem;
 
   /* Font sizes */
+  --text-xxs: 0.5rem;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -195,10 +196,12 @@ body {
   text-transform: uppercase;
   font-size: var(--text-md);
   font-weight: var(--weight-regular);
+  margin-top: -50px;
 }
 
 #bottom {
   height: 7.5rem;
+  margin-top: 130px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -221,6 +224,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: var(--space-xl);
+  margin-top: 37px;
 }
 
 #right {
@@ -265,6 +269,11 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .elem {
   border-bottom: 1.5px solid var(--color_text_muted);
   display: flex;
@@ -287,6 +296,12 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.desc {
+  transition: all 0.5s ease-in-out;
+  font-size: var(--text-xxs);
+  color: var(--color-text-dark);
+}
+
 .elem p {
   font-size: var(--text-lg);
   color: var(--color_text_muted);
@@ -296,6 +311,12 @@ body {
   transform: translateX(7rem);
   color: var(--color-text-dark);
 }
+
+.elem:hover .desc {
+  transform: translateX(7rem);
+  color: var(--color-text-dark);
+}
+
 .elem:hover p {
   color: var(--color-text-dark);
 }
@@ -365,9 +386,11 @@ body {
 }
 
 .profile {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 50%;
+  height: 30rem;
+  width: 20rem;
+  border-radius: 10px;
+  /* border-top-left-radius: 30%;
+  border-top-right-radius: 30%; */
   background-image: url("./assets/profile.jpeg");
   background-size: cover;
   background-position: center;

@@ -18,7 +18,7 @@ let getTime = () => {
   } else {
     meridiem = "PM";
   }
-  return (time = String(`Local: ${hours}:${minutes} ${meridiem} `));
+  return (time = String(`Local: ${hours}:${minutes} `));
 };
 
 let updateTime = () => {
